@@ -22,7 +22,7 @@ public class Person {
 	private Long id;
 	private String name;
 	private List<Profit> income;
-	private List<Bills> outcome;
+	private List<Bill> outcome;
 
 
 }

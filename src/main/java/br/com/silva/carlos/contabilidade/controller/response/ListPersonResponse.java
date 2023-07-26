@@ -1,6 +1,6 @@
 package br.com.silva.carlos.contabilidade.controller.response;
 
-import br.com.silva.carlos.contabilidade.domain.Bills;
+import br.com.silva.carlos.contabilidade.domain.Bill;
 import br.com.silva.carlos.contabilidade.domain.Profit;
 import lombok.*;
 
@@ -16,6 +16,6 @@ public class ListPersonResponse {
     private Long id;
     private String name;
     private List<Profit> income;
-    private List<Bills> outcome;
+    private List<Bill> outcome;
     
 }
