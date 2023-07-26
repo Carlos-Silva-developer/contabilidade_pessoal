@@ -1,25 +1,28 @@
 package br.com.silva.carlos.contabilidade.domain;
 
-import java.io.Serializable;
 import java.util.List;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Getter @Setter
 @NoArgsConstructor 
 @AllArgsConstructor
-public class Person implements Serializable{
-	
-	private static final long serialVersionUID = 1L;
-	
-	@SuppressWarnings("unused")
-	private String name;
-	private List<Double> income;
-	private List<Double> outcome;
-	
-	
+@Entity
+@Builder
+@EqualsAndHashCode(of = "id") @ToString(of = "id")
+public class Person {
 
-	)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	private String name;
+	private List<Profit> income;
+	private List<Bills> outcome;
+
+
+}
